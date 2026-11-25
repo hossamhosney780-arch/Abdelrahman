@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ABDO HOSNEY | مواقع للمحلات</title>
+<meta name="description" content="بعمل مواقع سريعة لأي محل أو مشروع. موقعك يجهز في يومين وبسعر ثابت، وتستقبل طلبات العملاء على واتساب.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1f1e; --bg2:#102a28; --card:#143432; --line:#24504c;
+  --text:#f2f5f4; --muted:#9db4b1; --accent:#ffb020; --accent-ink:#2a1c00; --wa:#25D366;
+  --r-lg:22px; --r-md:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;line-height:1.8;font-size:17px;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:"Readex Pro","IBM Plex Sans Arabic",sans-serif;line-height:1.35}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+h2{font-size:clamp(26px,5vw,36px);margin-bottom:10px}
+.sub{color:var(--muted);margin-bottom:34px;max-width:560px}
+
+
+/* fixed top bar */
+body{padding-top:64px}
+html{scroll-padding-top:70px}
+.topbar{position:fixed;top:0;right:0;left:0;z-index:50;height:64px;background:rgba(11,31,30,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{height:100%;display:flex;align-items:center;gap:14px}
+.logo{font-family:"Readex Pro",sans-serif;font-weight:700;font-style:italic;font-size:22px;letter-spacing:.5px;text-decoration:none;direction:ltr;color:var(--text)}
+.wa-mini{display:inline-flex;align-items:center;gap:6px;background:var(--wa);color:#04210f;font-weight:600;font-size:14px;padding:7px 14px;border-radius:999px;text-decoration:none;white-space:nowrap}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#04210f;padding:15px 28px;border-radius:999px;font-size:18px;font-weight:600;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--text);border:1.5px solid var(--line)}
+
+/* hero */
+.hero{padding:72px 0 56px;background:radial-gradient(900px 400px at 85% -10%,#1d4a45 0%,transparent 70%)}
+.hero h1{font-size:clamp(34px,8vw,64px);max-width:760px;margin-bottom:18px}
+.hero p{color:var(--muted);font-size:clamp(17px,3.5vw,21px);max-width:620px;margin-bottom:28px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;color:var(--muted);font-size:15px}
+.facts b{color:var(--text)}
+
+/* steps */
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));counter-reset:s}
+.step{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;position:relative}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;font-family:"Readex Pro",sans-serif;margin-bottom:14px}
+.step h3{font-size:20px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:16px}
+
+/* work */
+.work{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--card);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line)}
+.card img{display:block;width:100%;height:210px;object-fit:cover;background:var(--bg2)}
+.card div{padding:20px}
+.card h3{font-size:20px;margin-bottom:6px}
+.card p{color:var(--muted);font-size:16px}
+
+/* prices */
+.prices{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));align-items:stretch}
+.plan{background:var(--bg2);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px;display:flex;flex-direction:column}
+.plan.best{background:var(--card);border:2px solid var(--accent)}
+.plan .tag{align-self:flex-start;background:var(--accent);color:var(--accent-ink);font-size:14px;font-weight:600;padding:2px 12px;border-radius:999px;margin-bottom:10px}
+.plan h3{font-size:22px}
+.price{font-family:"Readex Pro",sans-serif;font-size:40px;font-weight:700;color:var(--accent);margin:8px 0 14px}
+.price small{font-size:16px;color:var(--muted);font-weight:500}
+.plan ul{list-style:none;color:var(--muted);font-size:16px;margin-bottom:22px;flex:1}
+.plan li{padding:5px 0 5px 0}
+.plan li::before{content:"✓";color:var(--accent);margin-left:8px;font-weight:700}
+.plan .btn{justify-content:center;font-size:16px;padding:12px 20px}
+
+/* reviews */
+.reviews{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.review{background:var(--bg2);border-right:4px solid var(--accent);border-radius:var(--r-md);padding:22px}
+.review p{margin-bottom:12px}
+.review span{color:var(--muted);font-size:15px}
+
+/* faq */
+.faq{max-width:720px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent);font-size:24px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);margin-top:10px}
+
+/* final cta */
+.final{text-align:center;background:var(--bg2);border-top:1px solid var(--line)}
+.final h2{margin-bottom:12px}
+.final p{color:var(--muted);margin:0 auto 26px;max-width:480px}
+
+footer{padding:26px 20px;text-align:center;color:var(--muted);font-size:15px;background:#071514}
+
+
+@media (max-width:600px){
+  section{padding:48px 0}
+  .btn{width:100%;justify-content:center}
+  .hero .actions{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="logo" href="#">ABDO HOSNEY</a>
+    <a class="wa-mini" href="https://wa.me/201123699541?text=عايز%20موقع%20لمحلي">واتساب</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>موقع لمحلك يجهز في يومين، ويجيبلك عملاء من السوشيال ميديا</h1>
+   <p>بعمل مواقع سريعة وشكلها شيك لأي محل أو مشروع. تحط لينك الموقع في صفحتك على انستجرام وتيك توك وفيسبوك، والعميل يطلب منك على واتساب مباشرة.</p>
+    <div class="actions">
+      <a class="btn" href="https://wa.me/201123699541?text=عايز%20موقع%20لمحلي">اطلب موقعك على واتساب</a>
+      <a class="btn alt" href="#prices">شوف الأسعار</a>
+    </div>
+    <div class="facts">
+      <span><b>يومين</b> للتسليم</span>
+      <span><b>سعر ثابت</b> بدون مفاجآت</span>
+      <span><b>دعم</b> بعد التسليم</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>إزاي نشتغل مع بعض؟</h2>
+    <p class="sub">ثلاث خطوات بسيطة، ومن غير تعقيد.</p>
+    <div class="steps">
+      <div class="step"><h3>تكلمني على واتساب</h3><p>تقولي نشاطك وإيه اللي عايز تعرضه، وأرد عليك بالسعر المناسب.</p></div>
+      <div class="step"><h3>أجهز الموقع</h3><p>أصمم الموقع بصورك ومنتجاتك وأوريهولك قبل ما ينزل.</p></div>
+      <div class="step"><h3>تستلمه وتشغله</h3><p>الموقع يشتغل في يومين، وأعلمك تدير محتواه بنفسك.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <h2>شغلي السابق</h2>
+    <p class="sub">نماذج من مواقع اتعملت لمحلات حقيقية.</p>
+    <div class="work">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700" alt="موقع متجر ملابس" loading="lazy">
+        <div><h3>متجر ملابس: AHMED STORE</h3><p>متجر كامل بسلة مشتريات وطلب على واتساب. صاحب المحل بقى يبيع وهو في البيت.</p></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700" alt="موقع مطعم" loading="lazy">
+        <div><h3>موقع مطعم: مطعم الشيف</h3><p>منيو أونلاين بصور الأكل، وزرار لحجز ترابيزة أو طلب دليفري في ثانية.</p></div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=700" alt="موقع صالون" loading="lazy">
+        <div><h3>موقع صالون: صالون ستايل</h3><p>صفحة تعريفية بصور شغل الصالون، وحجز مواعيد على واتساب من غير مكالمات.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="prices">
+  <div class="wrap">
+    <h2>الأسعار واضحة</h2>
+    <p class="sub">السعر اللي بتتفق عليه هو اللي بتدفعه.</p>
+    <div class="prices">
+      <div class="plan">
+        <h3>صفحة تعريفية</h3>
+        <div class="price">500 <small>جنيه</small></div>
+        <ul>
+          <li>صفحة واحدة تعرّف بمحلك</li>
+          <li>زرار واتساب</li>
+          <li>صور شغلك</li>
+        </ul>
+        <a class="btn alt" href="https://wa.me/201123699541?text=عايز%20صفحة%20تعريفية">اختار الباقة</a>
+      </div>
+      <div class="plan best">
+        <span class="tag">الأكثر طلبًا</span>
+        <h3>متجر صغير</h3>
+        <div class="price">1500 <small>جنيه</small></div>
+        <ul>
+          <li>متجر كامل بالمنتجات</li>
+          <li>سلة مشتريات</li>
+          <li>الطلب يوصلك على واتساب</li>
+        </ul>
+        <a class="btn" href="https://wa.me/201123699541?text=عايز%20متجر%20صغير">اختار الباقة</a>
+      </div>
+      <div class="plan">
+        <h3>موقع كامل</h3>
+        <div class="price">3000 <small>جنيه</small></div>
+        <ul>
+          <li>موقع احترافي بصفحات كتير</li>
+          <li>ربط مع جوجل</li>
+          <li>دعم شهر مجاني</li>
+        </ul>
+        <a class="btn alt" href="https://wa.me/201123699541?text=عايز%20موقع%20كامل">اختار الباقة</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- مهم: دي آراء مثال. بدّلها بآراء عملائك الحقيقيين قبل النشر -->
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <h2>اللي قالوه عني</h2>
+    <p class="sub">آراء من أصحاب محلات اشتغلت معاهم.</p>
+    <div class="reviews">
+      <div class="review"><p>الموقع خلص في يومين زي ما اتفقنا، وأول أسبوع جالي طلبات من انستجرام.</p><span>صاحب متجر ملابس</span></div>
+      <div class="review"><p>المنيو بقى أونلاين والزباين بتحجز من الموبايل. الشغل اتنظم جدًا.</p><span>صاحب مطعم</span></div>
+      <div class="review"><p>السعر كان واضح من أول يوم، وعبده فضل يرد عليا بعد التسليم.</p><span>صاحبة صالون</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>أسئلة شائعة</h2>
+    <div class="faq">
+      <deta<ils><summary>الموقع هياخد قد إيه عشان يخلص؟</summary><p>في الغالب يومين من وقت ما تبعتلي صورك ومعلومات محلك.</p></details>
+      <details><summary>هل أقدر أعدّل على الموقع بعد التسليم؟</summary><p>أيوه. بعلمك تغيّر الأسعار والصور بنفسك، وأنا موجود لو احتجت مساعدة.</p></details>
+      <details><summary>هل في مصاريف تانية غير السعر المتفق عليه؟</summary><p>السعر ثابت وبتتفق عليه قبل ما أبدأ. أي مصاريف زي الدومين بقولك عليها من الأول.</p></details>
+      <details><summary>العملاء هيطلبوا إزاي؟</summary><p>بيدوسوا على زرار واتساب في الموقع، والطلب بيوصلك جاهز على موبايلك.</p></details>
+    </div>
+  </div>
+/section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>جاهز تبدأ؟</h2>
+    <p>ابعتلي رسالة على واتساب وقولي نشاطك، وهرد عليك بالتفاصيل والسعر.</p>
+    <a class="btn" href="https://wa.me/201123699541?text=عايز%20موقع%20لمحلي">كلمني على واتساب</a>
+  </div>
+</section>
+
+<footer>© 2026 ABDO HOSNEY. كل الحقوق محفوظة.</footer>
+
+
+</body>
+      </html>
